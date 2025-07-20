@@ -1,0 +1,83 @@
+name: Elytic
+description: A scalable real-time chat app built with Flutter and Firebase.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Firebase Core Services ---
+  firebase_core: ^2.32.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.17.5       # Firestore database
+  firebase_storage: ^11.2.5      # For profile pics/media uploads
+  firebase_database: ^10.5.7     # For real-time presence/status tracking
+  firebase_messaging: ^14.7.10
+  cloud_functions: ^4.0.6
+  firebase_app_check: ^0.2.2+5
+
+  # --- State Management ---
+  provider: ^6.0.5               # Lightweight global state management
+  rxdart: ^0.27.7                # Stream combinations (e.g., unread counts)
+
+  # --- UI / UX Enhancements ---
+  cached_network_image: ^3.3.1   # For avatar/profile pic caching
+  timeago: ^3.5.0                # "5 min ago" timestamps
+  uuid: ^4.5.1                   # Generate unique message/user IDs
+
+  # --- Animations ---
+  lottie: ^2.7.0                 # For fancy animated feedback (e.g., tier upgrades)
+  flutter_animate: ^4.3.0        # Smooth widget animations
+  animations: ^2.0.11            # Material fade/slide/hero transitions
+
+  # --- In-App Notifications ---
+  overlay_support: ^2.1.0        # For snackbars/toasts/notification bars
+  onesignal_flutter: ^5.1.3      # Push notification support
+  in_app_purchase: ^3.2.3
+
+  # --- Optional Enhancements ---
+  loading_overlay: ^0.3.0        # Block screen with spinner during async actions
+  permission_handler: ^11.3.1    # Runtime permissions (mic, storage)
+  just_audio: ^0.9.35            # Audio message playback
+  image_picker: ^1.1.2
+  file_picker: ^8.0.0
+  google_fonts: ^6.2.1
+  flutter_sound: ^9.2.13
+  path_provider: ^2.1.2
+  image_cropper: ^9.1.0
+  share_plus: ^7.2.1
+  shared_preferences: ^2.2.2     # <-- Moved to dependencies
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  flutter_launcher_icons: ^0.11.0
+  purchases_flutter: ^8.10.3
+  url_launcher: ^6.1.10
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/avatars/         # For user avatar choices (custom)
+    - assets/lottie/          # Lottie animations (e.g., confetti, tier upgrades)
+    - assets/chat_bubble_assets/
+    - assets/mystery_box.png
+    - assets/animations/mystery_box_opening_animation.json
+    - assets/icons/like_heart.png
+    - assets/icons/gift_box.png
+    - assets/icons/vip_room_icon.jpg
+    - assets/icons/vip_room_page_background.jpg
+    - assets/icons/crown.png
+    - assets/
+    - assets/icons/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
