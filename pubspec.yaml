@@ -1,4 +1,4 @@
-name: Elytic
+name: elytic
 description: A scalable real-time chat app built with Flutter and Firebase.
 publish_to: "none"
 version: 1.0.0+1
